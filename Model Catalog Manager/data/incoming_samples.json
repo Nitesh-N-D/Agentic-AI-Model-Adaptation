@@ -1,0 +1,41 @@
+{
+  "exact_match_example": {
+    "model_id": "mdl-1001",
+    "name": "SentimentBERT",
+    "version": "1.0",
+    "task_type": "text-classification",
+    "architecture": "transformer",
+    "framework": "pytorch",
+    "domain": "general",
+    "size_params": "110M",
+    "accuracy": 0.94,
+    "source": "internal-team-nlp",
+    "tags": ["sentiment", "bert", "nlp", "retrained"]
+  },
+  "similar_match_example": {
+    "model_id": "mdl-2050",
+    "name": "SentimentBERT-v2",
+    "version": "1.0",
+    "task_type": "text-classification",
+    "architecture": "transformer",
+    "framework": "pytorch",
+    "domain": "general",
+    "size_params": "125M",
+    "accuracy": 0.93,
+    "source": "internal-team-nlp",
+    "tags": ["sentiment", "bert", "nlp", "improved"]
+  },
+  "new_model_example": {
+    "model_id": "mdl-3090",
+    "name": "SpeechToTextWav2Vec",
+    "version": "1.0",
+    "task_type": "speech-recognition",
+    "architecture": "transformer",
+    "framework": "pytorch",
+    "domain": "general",
+    "size_params": "300M",
+    "accuracy": 0.89,
+    "source": "internal-team-speech",
+    "tags": ["asr", "speech", "audio"]
+  }
+}
