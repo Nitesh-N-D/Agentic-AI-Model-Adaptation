@@ -1,0 +1,13 @@
+{
+    "model_id": "M001",
+    "model_name": "Customer Churn Predictor",
+    "version": "1.0",
+    "framework": "TensorFlow",
+    "owner": "AI Team",
+    "purpose": "Predict customer churn",
+    "dependencies": [
+        "tensorflow",
+        "numpy",
+        "pandas"
+    ]
+}
