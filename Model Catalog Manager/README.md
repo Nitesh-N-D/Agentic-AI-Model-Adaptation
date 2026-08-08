@@ -1,4 +1,4 @@
-# Model Catalog Manager (Simulator)
+# Model Catalog Manager
 
 A self-contained Python simulation of a **Model Catalog Manager**, built
 around four responsibilities:
