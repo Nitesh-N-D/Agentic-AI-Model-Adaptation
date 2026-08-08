@@ -642,4 +642,4 @@ The framework proposes to evaluate these contributions empirically as implementa
 
 ## License
 
-This project's license has not yet been finalized. A `LICENSE` file will be added to the repository once a license is selected.
+This project is licensed under the [MIT License](LICENSE).
