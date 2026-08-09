@@ -1,0 +1,60 @@
+{
+  "scenario_id": "scn_20260809035345",
+  "detected_at": "2026-08-09T03:53:45.498727+00:00",
+  "degradation_type": "data_drift",
+  "severity": "high",
+  "affected_model_version": "fraud-v3.2",
+  "recommended_strategy": "fine_tune",
+  "dataset_spec": {
+    "source": "feature_store://transactions/2026-07-01_to_2026-08-01",
+    "time_window": "2026-07-01 to 2026-08-01",
+    "label_quality_score": 0.88,
+    "covers_current_distribution": true
+  },
+  "baseline_checkpoint": "fraud-v3.2",
+  "fine_tuning_plan": {
+    "approach": "full",
+    "hyperparameter_ranges": {
+      "learning_rate": [
+        1e-05,
+        0.0005
+      ],
+      "epochs": [
+        1,
+        5
+      ],
+      "batch_size": [
+        8,
+        64
+      ],
+      "lora_rank": [
+        4,
+        32
+      ],
+      "weight_decay": [
+        0.0,
+        0.1
+      ]
+    },
+    "default_learning_rate": 2e-05,
+    "default_epochs": 3,
+    "default_batch_size": 16
+  },
+  "evaluation_report": {
+    "metrics": {
+      "baseline_metric": 0.91,
+      "candidate_metric": 0.935,
+      "baseline_regression_metric": 0.9,
+      "candidate_regression_metric": 0.905,
+      "shadow_kpi_delta_pct": 1.8
+    },
+    "passed_offline_gate": true,
+    "passed_regression_check": true,
+    "passed_shadow_gate": true,
+    "overall_pass": true
+  },
+  "lineage_metadata": {
+    "generated_by": "mlktl_python_implementation.orchestrator",
+    "design_doc_ref": "Weeks_1-4_Final_Deliverable.md"
+  }
+}
